@@ -1,16 +1,16 @@
-# Just another climbing scrape 
+## Just another climbing scrape 
 Web scraping tool that grabs product information of climbing shoe brands
 
 Featuring : Cheerio + Axios + Elbow Grease
 
 Featured Brands = [MadRock, Evolv, Salewa, La Sportiva, Scarpa]
 
-# Build Setup
+## Build Setup
 
-<!---install dependencies--->
+1. install dependencies
 
 npm install
 
-<!---iserve app in console--->
+2. serve app in console
 
 npm start
