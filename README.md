@@ -7,10 +7,10 @@ Featured Brands = [MadRock, Evolv, Salewa, La Sportiva, Scarpa]
 
 # Build Setup
 
-#install dependencies
+//install dependencies
 
 npm install
 
-#serve app in console
+//serve app in console
 
 npm start
