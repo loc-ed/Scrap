@@ -13,4 +13,4 @@ npm install
 
 2. serve app in console
 
-npm start
+npm run start
