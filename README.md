@@ -1,7 +1,7 @@
 ## Just another climbing scrape 
 Web scraping tool that grabs product information of climbing shoe brands
 
-Featuring : Cheerio + Axios + Elbow Grease
+Featuring : Cheerio + Axios + Pagination Magic + Elbow Grease
 
 Featured Brands = [MadRock, Evolv, Salewa, La Sportiva, Scarpa]
 
