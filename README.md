@@ -5,7 +5,7 @@ Featuring : Cheerio + Axios + Elbow Grease
 
 Featured Brands = [MadRock, Evolv, Salewa, La Sportiva, Scarpa]
 
-#Build Setup
+# Build Setup
 
 // install dependencies
 npm install
