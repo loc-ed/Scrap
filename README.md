@@ -14,3 +14,5 @@ Featured Brands = [MadRock, Evolv, Salewa, La Sportiva, Scarpa]
 2. serve app in console
 
 ~ npm run start
+
+Scrape compiles and generates the data into a CSV format 
