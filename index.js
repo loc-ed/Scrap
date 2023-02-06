@@ -19,7 +19,10 @@ function initiateSequence() {
     })
 }
 
-button.addEventListener('click', initiateScrape)
+button.addEventListener('click', function() {
+    console.log('test')
+    initiateSequence()
+})
 
 
 // const app = express()
