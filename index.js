@@ -9,7 +9,8 @@ const button = document.querySelector('.glowing-btn');
 
 function initiateSequence() {
 
-    console.log('debug mode')
+    console.log('initiate sequence mode')
+    alert('The button has been clicked!');
     // initiateScrape()
     // initiateHardwareScrape()
     // const app = express()
@@ -25,7 +26,8 @@ function alertMe(){
       alert('The button has been clicked!');
     }
     
-    button.addEventListener('click', alertMe);
+    button.addEventListener('click', initiateSequence)
+    // button.addEventListener('click', alertMe);
 
 // button.addEventListener('click', function() {
 //     console.log('test')
