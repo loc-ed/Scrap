@@ -1,5 +1,5 @@
-// import initiateScrape from './shoeScrape'
-// import initiateHardwareScrape from './hardwareScrape'
+import initiateScrape from './shoeScrape'
+import initiateHardwareScrape from './hardwareScrape'
 
 const PORT = 8000
 // import express from 'express'
