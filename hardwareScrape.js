@@ -1,4 +1,4 @@
-import axios from 'axios';
+import { axios } from 'axios';
 import { load } from 'cheerio';
 import { green, blue, magenta } from 'chalk';
 import { parseDocument } from 'htmlparser2';
