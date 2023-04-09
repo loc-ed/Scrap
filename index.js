@@ -2,7 +2,7 @@ import initiateScrape from './shoeScrape.js'
 import initiateHardwareScrape from './hardwareScrape.js'
 
 const PORT = 8000
-// import express from 'express'
+import express from 'express'
 // import chalk from 'chalk'
 
 const button = document.querySelector('.glowing-btn');
@@ -35,12 +35,12 @@ function alertMe(){
 // })
 
 
-// const app = express()
-// var server = app.listen(PORT, async function () {
-//     console.log(`server running on port ${PORT} `)
+const app = express()
+var server = app.listen(PORT, async function () {
+    console.log(`server running on port ${PORT} `)
 //     initiateScrape()
 //     initiateHardwareScrape()
-// })
+})
 
 // button.addEventListener("click", initiateSequence())
 

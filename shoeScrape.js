@@ -1,6 +1,6 @@
-import { axios } from 'axios';
+import  axios  from 'axios';
 import { load } from 'cheerio';
-import { green, blue, magenta } from 'chalk';
+import chalk from 'chalk';
 import { parseDocument } from 'htmlparser2';
 import { write } from 'fast-csv';
 import { createWriteStream } from "fs";
@@ -632,10 +632,10 @@ function compileShoeData() {
     const shoeList = HEADER.concat(sportivaData,driftersData,mmoData,togData,ramData,adventureInc, evolData[0],evolData[1], scarpaData,madrockData, salewaData[0], salewaData[1])
     // shoeCSV = convertToCSV(shoeList)
     write(shoeList).pipe(writableFile)
-    console.log(green.bold(` Shoe CSV has been successfully generated`))
+    console.log(chalk.green.bold(` Shoe CSV has been successfully generated`))
     const end = Date.now()
     let time = (end - start)/1000
-    console.log(blue.bold(`Execution time: ${time} seconds`))
+    console.log(chalk.blue.bold(`Execution time: ${time} seconds`))
 
 }
 //------------------------------------------------------------------------------------------------//
@@ -664,43 +664,43 @@ function compileShoeData() {
 async function initiateScrape() {
 
 
-    console.log(blue.bold(`Scrape sequence initialized ...`))
+    console.log(chalk.blue.bold(`Scrape sequence initialized ...`))
 
     //scraping local domains
-    console.log(green.bold(`Scraping Local Domains`))
+    console.log(chalk.green.bold(`Scraping Local Domains`))
 
-    console.log(magenta(`Scraping: Adventure Inc Shoes`))
+    console.log(chalk.magenta(`Scraping: Adventure Inc Shoes`))
     scrapeAdventureInc('https://www.adventureinc.co.za/product-category/la-sportiva/climbing-footwear/?products-per-page=all','Climbing Shoes')
 
-    console.log(magenta(`Scraping: MMO Shoes`))
+    console.log(chalk.magenta(`Scraping: MMO Shoes`))
     scrapeMMO('https://www.mountainmailorder.co.za/footwear/climbing-shoes/','Climbing Shoes')
 
-    console.log(magenta(`Scraping: RAM Shoes`))
+    console.log(chalk.magenta(`Scraping: RAM Shoes`))
     scrapeRam('https://blackdiamondequipment.co.za/product-category/rock/climbing-shoes/','Climbing Shoes')
 
-    console.log(magenta(`Scraping: TraverseGear Shoes`))
+    console.log(chalk.magenta(`Scraping: TraverseGear Shoes`))
     scrapeTOG('https://traversegear.co.za/product-category/footwear/')
 
-    console.log(magenta(`Scraping: Drifters Shoes`))
+    console.log(chalk.magenta(`Scraping: Drifters Shoes`))
     scrapeDrifters('https://www.driftersshop.co.za/collections/climbing-footwear','Climbing Shoes',null)
 
 
     // scraping international domains 
     console.log(green.bold(`Scraping International Domains`))
 
-    console.log(magenta(`Scraping: Evolv Shoes`))
+    console.log(chalk.magenta(`Scraping: Evolv Shoes`))
     scrapeEvolv('https://www.evolvsports.com/int/climbing-shoes', 'Climbing Shoes')
 
-    console.log(magenta(`Scraping: Scarpa Shoes`))
+    console.log(chalk.magenta(`Scraping: Scarpa Shoes`))
     scrapeScarpa('https://world.scarpa.com/shop/category/19267839/', 'Climbing Shoes')
 
-    console.log(magenta(`Scraping: Mad Rock Shoes`))
+    console.log(chalk.magenta(`Scraping: Mad Rock Shoes`))
     scrapeMadRock('https://madrock.eu/product-category/shoes/?number=24')
 
-    console.log(magenta(`Scraping: La Sportiva Shoes`))
+    console.log(chalk.magenta(`Scraping: La Sportiva Shoes`))
     scrapeSportiva('https://www.lasportiva.com/en/man/footwear', 'Man')
 
-    console.log(magenta(`Scraping: Salewa Shoes`))
+    console.log(chalk.magenta(`Scraping: Salewa Shoes`))
     scrapeSalewa('https://www.salewa.com/men-mountain-footwear?p=1', 'Man')
 
     return

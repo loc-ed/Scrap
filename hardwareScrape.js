@@ -1,6 +1,6 @@
-import { axios } from 'axios';
+import  axios  from 'axios';
 import { load } from 'cheerio';
-import { green, blue, magenta } from 'chalk';
+import chalk from 'chalk';
 import { parseDocument } from 'htmlparser2';
 import { write } from 'fast-csv';
 import { createWriteStream } from "fs";
@@ -266,15 +266,15 @@ function compileData() {
 async function initiateHardwareScrape() {
 
     //scraping local domains
-    console.log(green.bold(`Scraping Local Domains`))
+    console.log(chalk.green.bold(`Scraping Local Domains`))
 
-    console.log(magenta(`Scraping: MMO Hardware`))
+    console.log(chalk.magenta(`Scraping: MMO Hardware`))
     scrapeMMO('https://www.mountainmailorder.co.za/climbing/carabiners/','Carabiners')
 
-    console.log(magenta(`Scraping: RAM Hardware`))
+    console.log(chalk.magenta(`Scraping: RAM Hardware`))
     scrapeRam('https://www.rammountain.co.za/cat/climbing/connectors/','Carabiners & Quickdraws')
 
-    console.log(magenta(`Scraping: Drifters Hardware`))
+    console.log(chalk.magenta(`Scraping: Drifters Hardware`))
     scrapeDrifters('https://www.driftersshop.co.za/collections/carabiners-quickdraws','Carabiners & Quickdraws')
 
     setTimeout(() => {  compileData() }, 5000);
