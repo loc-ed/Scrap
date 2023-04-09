@@ -1,5 +1,5 @@
-import initiateScrape from './shoeScrape'
-import initiateHardwareScrape from './hardwareScrape'
+// import initiateScrape from './shoeScrape'
+// import initiateHardwareScrape from './hardwareScrape'
 
 const PORT = 8000
 // import express from 'express'
@@ -20,10 +20,17 @@ function initiateSequence() {
     // })
 }
 
-button.addEventListener('click', function() {
-    console.log('test')
-    initiateSequence()
-})
+function alertMe(){
+      console.log('clicked ')
+      alert('The button has been clicked!');
+    }
+    
+    button.addEventListener('click', alertMe);
+
+// button.addEventListener('click', function() {
+//     console.log('test')
+//     initiateSequence()
+// })
 
 
 // const app = express()
