@@ -3,6 +3,7 @@ import initiateHardwareScrape from './hardwareScrape.js'
 
 const PORT = 8000
 import express from 'express'
+const express = require('express')
 // import chalk from 'chalk'
 
 const button = document.querySelector('.glowing-btn');
