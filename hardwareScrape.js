@@ -1,9 +1,16 @@
-import  axios  from 'axios';
-import { load } from 'cheerio';
-import chalk from 'chalk';
-import { parseDocument } from 'htmlparser2';
-import { write } from 'fast-csv';
-import { createWriteStream } from "fs";
+const axios = require('axios')
+const load = require('cheerio')
+const chalk = require('chalk')
+const parseDocument = require('htmlparser2')
+const write = require('fast-csv')
+const createWriteStream = require('fs')
+
+// import  axios  from 'axios';
+// import { load } from 'cheerio';
+// import chalk from 'chalk';
+// import { parseDocument } from 'htmlparser2';
+// import { write } from 'fast-csv';
+// import { createWriteStream } from "fs";
 
 let currentDate = new Date().toJSON().slice(0, 10);
 const start = Date.now()
