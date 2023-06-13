@@ -72,36 +72,45 @@ const button = document.querySelector('.glowing-btn');
                         .then(response => response.json()
         )
 
-        const shoeArray = shoeResponse.content
-        const hardwareArray = hardwareResponse.content
-        
-        hardwareArray.forEach((item) => {
-            hardwareFormatted.push({
-                name : item.name,
-                currency : item.currency,
-                price : item.price,
-                brand : item.brand,
-                catagory : item.catagory,
-                sex : item.sex,
-                location : item.location,
-                supplier : item.supplier,
-            })
-        })
+        if (shoeResponse.content) {
+            const shoeArray = shoeResponse.content
 
-        shoeArray.forEach((item) => {
-            shoesFormatted.push({
-                name : item.name,
-                currency : item.currency,
-                price : item.price,
-                brand : item.brand,
-                catagory : item.catagory,
-                sex : item.sex,
-                location : item.location,
-                supplier : item.supplier,
+            shoeArray.forEach((item) => {
+                shoesFormatted.push({
+                    name : item.name,
+                    currency : item.currency,
+                    price : item.price,
+                    brand : item.brand,
+                    catagory : item.catagory,
+                    sex : item.sex,
+                    location : item.location,
+                    supplier : item.supplier,
+                })
             })
-        })
+            exportCSVFile(HEADER,shoesFormatted,shoeFilename)
+        } else {
+            console.log('Fire in the disco.Error in shoe content')
+        }
+    
+        if (hardwareResponse.content) {
+            const hardwareArray = hardwareResponse.content
 
-        exportCSVFile(HEADER,shoesFormatted,shoeFilename)
-        exportCSVFile(HEADER,hardwareFormatted,hardwareFilename)
+            hardwareArray.forEach((item) => {
+                hardwareFormatted.push({
+                    name : item.name,
+                    currency : item.currency,
+                    price : item.price,
+                    brand : item.brand,
+                    catagory : item.catagory,
+                    sex : item.sex,
+                    location : item.location,
+                    supplier : item.supplier,
+                })
+            })
+            exportCSVFile(HEADER,hardwareFormatted,hardwareFilename)
+        } else {
+            console.log('Fire in the disco.Error in hardware content')
+        }
+       
     })
 
